@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Sayang 💛</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #fff8e7, #f5dfaa);
+    color: #76572d;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+h1 {
+    color: #c69a3c;
+    font-size: 32px;
+    margin: 25px 0;
+}
+
+h2 {
+    color: #bd9135;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.9;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 26px;
+    background: linear-gradient(135deg, #e9c66b, #c99b36);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* GALERI */
+
+.gallery {
+    margin-top: 35px;
+    padding: 12px;
+    background: #fffdf6;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px #9e793a30;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #f1e5c8;
+}
+
+.slides img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slides img.active {
+    opacity: 1;
+}
+
+.caption {
+    margin: 15px 0 5px;
+    font-style: italic;
+}
+
+.counter {
+    font-size: 13px;
+    opacity: .7;
+}
+
+/* SURAT */
+
+.letter {
+    background: #fffdf5;
+    margin-top: 35px;
+    padding: 27px;
+    border-radius: 20px;
+    text-align: left;
+    line-height: 2;
+    box-shadow: 0 8px 25px #9e793a20;
+}
+
+.letter p {
+    margin-bottom: 16px;
+}
+
+/* MUSIK */
+
+.music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #c99b36;
+    color: white;
+    font-size: 20px;
+    z-index: 10;
+}
+
+/* ANIMASI */
+
+.heart {
+    position: fixed;
+    top: -20px;
+    color: #d5aa51;
+    pointer-events: none;
+    animation: falling linear forwards;
+    z-index: 5;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+footer {
+    margin: 40px 0 80px;
+    font-size: 13px;
+    opacity: .7;
+}
+
+@media(max-width: 480px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    .slides {
+        height: 330px;
+    }
+
+    .letter {
+        padding: 21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- PEMBUKA -->
+
+    <section id="opening">
+
+        <h1>For My Sayang 💛</h1>
+
+        <p>
+            A little surprise for someone special.
+            <br>
+            Before your big day tomorrow,
+            I have something to tell you.
+        </p>
+
+        <button onclick="openWebsite()">
+            OPEN YOUR SURPRISE 💌
+        </button>
+
+    </section>
+
+
+    <!-- ISI WEBSITE -->
+
+    <section id="main" class="hidden">
+
+        <h1>GOOD LUCK FOR TKA! 🌻</h1>
+
+        <p>
+            Hey, Sayang.
+            Tomorrow is your day!
+            <br>
+            I believe in you.
+        </p>
+
+
+        <!-- GALERI FOTO -->
+
+        <div class="gallery">
+
+            <div class="slides" id="slides">
+
+                <!-- TAMBAHKAN FOTO DI SINI -->
+
+                <img src="photos/WhatsApp Image 2026-11-01 at 21.57.24 (1).jpeg" class="active" alt="Memory 1">
+
+                <img src="photos/WhatsApp Image 2026-11-01 at 21.57.24.jpeg" alt="Memory 2">
+
+                <img src="photos/WhatsApp Image 2026-11-01 at 21.57.25 (1).jpeg" alt="Memory 3">
+
+                <img src="photos/WhatsApp Image 2026-11-01 at 21.57.25 (2).jpeg" alt="Memory 4">
+
+                <img src="photos/WhatsApp Image 2026-11-01 at 21.57.25.jpeg" alt="Memory 5">
+
+            </div>
+
+            <p class="caption" id="caption">
+                Every memory with you is special. 💛
+            </p>
+
+            <p class="counter" id="counter">1 / 5</p>
+
+        </div>
+
+
+        <!-- SURAT -->
+
+        <div class="letter">
+
+            <h2 style="text-align:center">
+                A Little Letter For You 💌
+            </h2>
+
+            <p>
+                Sayang, besok adalah hari yang penting buat sayang.
+                Aku tahu mungkin ada rasa gugup, takut,
+                atau khawatir tentang bagaimana semuanya berjalan.
+            </p>
+
+            <p>
+                Tapi aku mau kamu ingat kalo sayang sudah
+                sampai sejauh ini. Ada banyak usaha dan
+                perjuangan yang sudah sayang berikan.
+            </p>
+
+            <p>
+                Besok kerjakan semuanya dengan tenang.
+                Baca setiap soal baik-baik, jangan terburu-buru,
+                dan percaya pada kemampuan dirimu sayang.
+            </p>
+
+            <p>
+                Jangan terlalu membebani dirimu dengan hasil.
+                Kamu tidak harus sempurna untuk membuatku bangga.
+            </p>
+
+            <p>
+                Malam ini istirahat yang cukup,
+                makan dengan baik, dan jangan lupa berdoa.
+            </p>
+
+            <p>
+                Apa pun yang terjadi besok,
+                aku akan tetap bangga kepadamu.
+            </p>
+
+            <p style="text-align:center;color:#bd9135">
+                I believe in you, Sayang. 💛
+            </p>
+
+        </div>
+
+
+        <h2 style="margin-top:40px">
+            YOU CAN DO IT! ✨
+        </h2>
+
+        <p>
+            Aku bangga sama kamu,
+            apa pun hasilnya.
+        </p>
+
+        <p style="margin-top:20px">
+            Always rooting for you. 🌷
+        </p>
+
+    </section>
+
+    <footer>
+        Made with love, especially for Sayang. 💛
+    </footer>
+
+</div>
+
+
+<!-- MUSIK -->
+
+<audio id="music" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<button
+    id="musicButton"
+    class="music-button hidden"
+    onclick="toggleMusic()">
+    ♫
+</button>
+
+
+<script>
+
+// MEMBUKA WEBSITE
+
+function openWebsite() {
+
+    document.getElementById("opening").classList.add("hidden");
+
+    document.getElementById("main").classList.remove("hidden");
+
+    document.getElementById("musicButton").classList.remove("hidden");
+
+    document.getElementById("music").play().catch(() => {
+        console.log("Musik belum dapat diputar.");
+    });
+
+    startSlideshow();
+    startHearts();
+
+}
+
+
+// SLIDESHOW OTOMATIS
+
+let current = 0;
+let slideshowStarted = false;
+
+function startSlideshow() {
+
+    if (slideshowStarted) return;
+    slideshowStarted = true;
+
+    const slides = document.querySelectorAll(".slides img");
+
+    function changeSlide() {
+
+        slides[current].classList.remove("active");
+
+        current = (current + 1) % slides.length;
+
+        slides[current].classList.add("active");
+
+        document.getElementById("counter").textContent =
+            (current + 1) + " / " + slides.length;
+
+    }
+
+    setInterval(changeSlide, 4000);
+
+}
+
+
+// KONTROL MUSIK
+
+function toggleMusic() {
+
+    const music = document.getElementById("music");
+    const button = document.getElementById("musicButton");
+
+    if (music.paused) {
+        music.play();
+        button.textContent = "♫";
+    } else {
+        music.pause();
+        button.textContent = "▶";
+    }
+
+}
+
+
+// ANIMASI HATI
+
+function startHearts() {
+
+    setInterval(() => {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.textContent = Math.random() > 0.5 ? "♥" : "✦";
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (12 + Math.random() * 20) + "px";
+
+        heart.style.animationDuration =
+            (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7000);
+
+    }, 400);
+
+}
+
+</script>
+
+</body>
+</html>
